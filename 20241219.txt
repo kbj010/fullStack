@@ -1,0 +1,18 @@
+1. model 1
+                     request        Controller
+   Web Brower -------------> jsp <------------------------> JavaBean(Dao) <-----------> DB 
+                                        |
+                                    결과 출력
+
+2. model 2  (MVC)                                               Business Model(Model) 업무처리
+          request  DTO           Controller                                               CRUD
+   WB --------------------->  Servlet <---------------> Service ---------> Dao <-----------> DB
+                                          | 화면에 출력
+                                       View
+
+3. command.propeties를 이용한 MVC
+          request                     |----------- WEB-INF/command.properties
+ WB -----------------------> Controller -------------  CommandProcess (interface)
+                                         |                                |
+                                      View                   구현한 Service <-----> Dao <------> DB
+
